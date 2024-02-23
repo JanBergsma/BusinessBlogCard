@@ -1,0 +1,61 @@
+/*  Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+/* Variables */
+:root {
+  --bg-wrappper: #fafaf9;
+  --bg-body: #e5eaf0;
+  --bg-card: #fff;
+  --c-text-accent: #111729;
+  --c-text: #677489;
+}
+
+/* Elements */
+
+/* classes */
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
