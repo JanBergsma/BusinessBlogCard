@@ -1,15 +1,18 @@
+/* TODO: https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/ */
 /*  Reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 /*
   2. Remove default margin
 */
 * {
   margin: 0;
 }
+
 /*
   Typographic tweaks!
   3. Add accessible line-height
@@ -19,6 +22,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
 /*
   5. Improve media defaults
 */
@@ -35,27 +39,72 @@ h1,
 h2 {
   overflow-wrap: break-word;
 }
+
 /* Variables */
 :root {
-  --bg-wrappper: #fafaf9;
+  /* Colors */
+  --bg-main: #fafaf9;
   --bg-body: #e5eaf0;
   --bg-card: #fff;
   --c-text-accent: #111729;
   --c-text: #677489;
+  /* Font */
+  --lato-body-weight: 400;
+  --lato-body-size: 1rem;
+  --lato-small-weight: 700;
+  --lato-small-size: 1rem;
+  --poppins-title-weight: 700;
+  --poppins-title-size: 1.5rem;
+  /* Auxiliar */
+  --border-redius: 15px;
+  --box-shadow: 0 30px 100px 0 #1117290d;
 }
 
 /* Elements */
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+main {
+  background: var(--bg-main);
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* classes */
+.card {
+  background: lightgrey;
+  box-shadow: var(--box-shadow);
+}
 
-.lato-regular {
+.lato-body {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: var(--lato-body-weight);
+  font-size: var(--lato-body-size);
   font-style: normal;
 }
 
-.poppins-regular {
+.lato-small {
+  font-family: "Lato", sans-serif;
+  font-weight: var(--lato-small-weight);
+  font-size: var(--lato-small-size);
+  font-style: normal;
+}
+
+.poppins-title {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: var(--poppins-title-weight);
+  font-size: var(--poppins-title-size);
   font-style: normal;
 }
