@@ -56,7 +56,8 @@ h2 {
   --poppins-title-weight: 700;
   --poppins-title-size: 1.5rem;
   /* Auxiliar */
-  --border-redius: 15px;
+  --max--width-of-card: 430px;
+  --border-radius: 15px;
   --box-shadow: 0 30px 100px 0 #1117290d;
 }
 
@@ -84,8 +85,48 @@ main {
 
 /* classes */
 .card {
-  background: lightgrey;
+  background: var(--bg-card);
   box-shadow: var(--box-shadow);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6fr 2fr 1fr;
+  max-width: var(--max--width-of-card);
+  border-radius: var(--border-radius);
+}
+
+.hero-image {
+  background:
+    url(../images/hero-image-business-card.png),
+    url(../images/white-overlay.svg);
+  background-blend-mode: overlay;
+  background-size: cover, contain;
+  background-position: center, bottom;
+  background-repeat: no-repeat;
+
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.card-author {
+  display: flex;
+}
+
+.card-author-avatar {
+  width: 10%;
+}
+
+.card-author-description {
+  display: flex;
+}
+
+.card-author-description-avatar {
+  flex-basis: 1;
+}
+
+.card-author-description {
+  flex-basis: 10;
+  display: flex;
+  flex-direction: column;
 }
 
 .lato-body {
