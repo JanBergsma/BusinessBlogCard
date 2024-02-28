@@ -19,7 +19,6 @@
   4. Improve text rendering
 */
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -51,14 +50,17 @@ h2 {
   /* Font */
   --lato-body-weight: 400;
   --lato-body-size: 1rem;
-  --lato-small-weight: 700;
-  --lato-small-size: 1rem;
-  --poppins-title-weight: 700;
+  --lato-small-weight: 400;
+  --lato-small-weight-header: 700;
+  --lato-small-size: 0.8rem;
+  --lato-small-size-header: 1rem;
+  --poppins-title-weight: 550;
   --poppins-title-size: 1.5rem;
   /* Auxiliar */
-  --max--width-of-card: 430px;
+  --max-width-of-card: 430px;
   --border-radius: 15px;
-  --box-shadow: 0 30px 100px 0 #1117290d;
+  --card-author-padding-horizontal: 2rem;
+  --card-apdding-bottom: 2rem;
 }
 
 /* Elements */
@@ -86,12 +88,14 @@ main {
 /* classes */
 .card {
   background: var(--bg-card);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 30px 100px 0 #11172942;
+  ;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 6fr 2fr 1fr;
-  max-width: var(--max--width-of-card);
+  grid-template-rows: 15fr 6fr 5fr;
+  max-width: var(--max-width-of-card);
   border-radius: var(--border-radius);
+  gap: 1.5rem;
 }
 
 .hero-image {
@@ -100,39 +104,64 @@ main {
     url(../images/white-overlay.svg);
   background-blend-mode: overlay;
   background-size: cover, contain;
-  background-position: center, bottom;
+  background-position: center, 0% 101%;
   background-repeat: no-repeat;
 
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
 
+.card-content {
+  padding: 0 var(--card-author-padding-horizontal);
+  margin-top: -1rem;
+}
+
+.card-header {
+  color: var(--c-text-accent);
+}
+
+.card-body {
+  color: var(--c-text);
+  line-height: 1.5;
+  margin-top: 0.6rem;
+}
+
 .card-author {
   display: flex;
+  padding: 0 var(--card-author-padding-horizontal) 0 var(--card-author-padding-horizontal);
+  gap: 1rem;
+  align-items: center;
+  border-top: 0.01rem solid #67748929;
 }
 
 .card-author-avatar {
-  width: 10%;
+  height: 2.5rem;
+  border-radius: 50%;
 }
 
 .card-author-description {
+  flex-basis: auto;
   display: flex;
+  flex-direction: column;
+  columns: var(--c-text);
 }
 
 .card-author-description-avatar {
-  flex-basis: 1;
+  flex-basis: auto;
 }
 
-.card-author-description {
-  flex-basis: 10;
-  display: flex;
-  flex-direction: column;
-}
 
 .lato-body {
   font-family: "Lato", sans-serif;
   font-weight: var(--lato-body-weight);
   font-size: var(--lato-body-size);
+  font-style: normal;
+}
+
+.lato-small-header {
+  font-family: "Lato", sans-serif;
+  font-weight: var(--lato-small-weight-header);
+  font-size: var(--lato-small-size-header);
   font-style: normal;
 }
 
