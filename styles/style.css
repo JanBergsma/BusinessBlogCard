@@ -78,8 +78,8 @@ body {
 
 main {
   background: var(--bg-main);
-  width: 90%;
-  height: 90%;
+  width: max(90%, 500px);
+  height: max(90%, 600px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +89,6 @@ main {
 .card {
   background: var(--bg-card);
   box-shadow: 0 30px 100px 0 #11172942;
-  ;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 15fr 6fr 5fr;
