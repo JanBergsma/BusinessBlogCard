@@ -48,13 +48,13 @@ h2 {
   --c-text-accent: #111729;
   --c-text: #677489;
   /* Font */
-  --lato-body-weight: 400;
+  --lato-body-weight: 420;
   --lato-body-size: 1rem;
   --lato-small-weight: 400;
   --lato-small-weight-header: 700;
   --lato-small-size: 0.8rem;
   --lato-small-size-header: 1rem;
-  --poppins-title-weight: 550;
+  --poppins-title-weight: 520;
   --poppins-title-size: 1.5rem;
   /* Auxiliar */
   --max-width-of-card: 430px;
@@ -120,12 +120,13 @@ main {
 }
 
 .card-body {
-  color: var(--c-text);
   line-height: 1.5;
   margin-top: 0.6rem;
+  color: var(--c-text);
 }
 
 .card-author {
+  color: var(--c-text);
   display: flex;
   padding: 0 var(--card-author-padding-horizontal) 0 var(--card-author-padding-horizontal);
   gap: 1rem;
@@ -176,4 +177,26 @@ main {
   font-weight: var(--poppins-title-weight);
   font-size: var(--poppins-title-size);
   font-style: normal;
+}
+
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: #fafaf9;
+    --bg-body: #e5eaf0;
+    --bg-card: #111729;
+    --c-text-accent: #e5eaf0;
+    --c-text: #ebeef2;
+  }
+
+  .hero-image {
+    background:
+      url(../images/hero-image-business-card.png),
+      url(../images/grey-overlay.svg);
+    background-blend-mode: darken;
+    background-size: cover, contain;
+    background-position: center, 0% 101%;
+    background-repeat: no-repeat;
+  }
 }
