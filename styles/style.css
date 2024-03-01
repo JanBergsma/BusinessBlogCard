@@ -47,6 +47,7 @@ h2 {
   --bg-card: #fff;
   --c-text-accent: #111729;
   --c-text: #677489;
+  --author-top-border-color: #67748929;
   /* Font */
   --lato-body-weight: 420;
   --lato-body-size: 1rem;
@@ -131,7 +132,7 @@ main {
   padding: 0 var(--card-author-padding-horizontal) 0 var(--card-author-padding-horizontal);
   gap: 1rem;
   align-items: center;
-  border-top: 0.01rem solid #67748929;
+  border-top: 0.01rem solid var(--author-top-border-color);
 }
 
 .card-author-avatar {
@@ -188,6 +189,7 @@ main {
     --bg-card: #111729;
     --c-text-accent: #e5eaf0;
     --c-text: #ebeef2;
+    --author-top-border-color: #6774898c;
   }
 
   .hero-image {
